@@ -28,12 +28,25 @@ body {
     text-align: center;
 }
 
+.screen * {
+    cursor: none;
+}
+
 .screen h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #f09819;
     font-weight: lighter;
     font-family: sans-serif;
+}
+
+.screen h2 {
+    color: burlywood;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin-right: -5px;
 }
 
 .score {
@@ -98,4 +111,15 @@ body {
 #playDice:hover {
     background-image: linear-gradient(#f09819, #ff512f);
     color: #fff;
+}
+
+
+/* Advise */
+
+.advise {
+    width: 800px;
+    padding-top: 20px;
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 14px;
 }
