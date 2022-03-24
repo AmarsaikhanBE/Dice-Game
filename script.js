@@ -1,11 +1,11 @@
 let player1Name = localStorage.getItem('p1Name')
 let player2Name = localStorage.getItem('p2Name')
-if (player1Name == '') {
+if (player1Name == '' || player1Name == null) {
     humanName.textContent = 'Player 1'
 } else {
     humanName.textContent = player1Name
 }
-if (player2Name == '') {
+if (player2Name == '' || player2Name == null) {
     computer.textContent = 'Player 2'
 } else {
     computer.textContent = player2Name
@@ -63,7 +63,7 @@ playDice.addEventListener('click', () => {
         humanName.style.fontWeight = '900'
         computer.style.fontWeight = '100'
         if (Number(humanScore.textContent) >= 100) {
-            alert('Winner is: Player 1')
+            alert('Winner is: ' + humanName.textContent)
             restartGame()
             humanWin++
             humanWinCounter.textContent = humanWin
@@ -74,7 +74,7 @@ playDice.addEventListener('click', () => {
         humanName.style.fontWeight = '100'
         computer.style.fontWeight = '900'
         if (Number(cpuScore.textContent) >= 100) {
-            alert('Winner is: Player 2')
+            alert('Winner is: ' + computer.textContent)
             restartGame()
             cpuWin++
             cpuWinCounter.textContent = cpuWin
@@ -89,12 +89,12 @@ newGame.addEventListener('click', () => {
     cpuWinCounter.textContent = cpuWin
     player1Name = prompt("Player 1")
     player2Name = prompt('Player 2')
-    if (player1Name == '') {
+    if (player1Name == '' || player1Name == null) {
         humanName.textContent = 'Player 1'
     } else {
         humanName.textContent = player1Name
     }
-    if (player2Name == '') {
+    if (player2Name == '' || player2Name == null) {
         computer.textContent = 'Player 2'
     } else {
         computer.textContent = player2Name
